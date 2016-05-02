@@ -521,19 +521,24 @@ a:active {
 	overflow: hidden;
 }
 
+.nav-links {
+	display: inline-block;
+	width: 100%;
+}
 .comment-navigation .nav-previous,
 .paging-navigation .nav-previous,
 .post-navigation .nav-previous {
-	float: left;
+	text-align: left;
 	width: 50%;
+	float: right;
 }
 
 .comment-navigation .nav-next,
 .paging-navigation .nav-next,
 .post-navigation .nav-next {
-	float: right;
 	text-align: right;
-	width: 50%;
+
+	float: right;
 }
 
 /*--------------------------------------------------------------

@@ -21,13 +21,17 @@ function feeneytwocolumn_paging_nav() {
 		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'feeneytwocolumn' ); ?></h1>
 		<div class="nav-links">
 
-			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'feeneytwocolumn' ) ); ?></div>
-			<?php endif; ?>
+	<?php if ( get_previous_posts_link() ) : ?>
+				<div class="nav-next">
+					<?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'feeneytwocolumn' ) ); ?>
+				</div>
+	<?php endif; ?>
 
-			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'feeneytwocolumn' ) ); ?></div>
-			<?php endif; ?>
+	<?php if ( get_next_posts_link() ) : ?>
+				<div class="nav-previous">
+					<?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'feeneytwocolumn' ) ); ?>
+				</div>
+	<?php endif; ?>
 
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->
@@ -52,8 +56,8 @@ function feeneytwocolumn_post_nav() {
 		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'feeneytwocolumn' ); ?></h1>
 		<div class="nav-links">
 			<?php
-				previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&larr;</span>&nbsp;%title', 'Previous post link', 'feeneytwocolumn' ) );
 				next_post_link(     '<div class="nav-next">%link</div>',     _x( '%title&nbsp;<span class="meta-nav">&rarr;</span>', 'Next post link',     'feeneytwocolumn' ) );
+previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&larr;</span>&nbsp;%title', 'Previous post link', 'feeneytwocolumn' ) );
 			?>
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->
